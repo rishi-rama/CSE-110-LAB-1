@@ -1,3 +1,9 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
 .top-logo {
     max-width: 400px;
     margin: 20px auto;
@@ -19,7 +25,6 @@
     padding: 0;
     display: flex;
     justify-content: center;
-    font-size: 28px;
 }
 
 .nav-list li {
@@ -30,7 +35,7 @@
     color: #182b49;
     text-decoration: none;
     padding: 10px 15px;
-    border-radius: 0px;
+    border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
     font-size: 28px;
 }
@@ -44,12 +49,12 @@
     display: inline-block;
     width: 100%;
     vertical-align: top;
-    font-size: 28px;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .section1-style {
     background-color: rgb(245, 240, 230);
-    font-size: 28px;
 }
 
 .section2-style {
@@ -57,24 +62,22 @@
     background-size: cover;
     background-position: center;
     color: white;
-    font-size: 28px;
 }
 
-.section2-style h2, .section2-style p {
-    color: white;
-    font-size: 28px;
+.section1-style img, .section2-style img {
+    max-width: 100%;
+    height: auto;
 }
 
-.section1-style h2, .section1-style p {
-    font-size: 28px;
-}
-
-.section1-style p, .section2-style p {
-    font-size: 28px;
-}
-
-#section1, #section2, #section3 {
+#section1, #section2, #section3, #subscribe-section {
     scroll-margin-top: 60px;
+}
+
+h2 {
+    font-size: 28px;
+}
+
+p {
     font-size: 28px;
 }
 
@@ -83,8 +86,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
     padding: 25px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 .grid-item {
@@ -98,9 +99,36 @@
 
 .grid-item h3 {
     margin-top: 0;
-    font-size: 28px;
 }
 
-.grid-item p {
-    font-size: 28px;
+form {
+    margin-top: 20px;
+}
+
+input[type="email"], input[type="submit"] {
+    font-size: 18px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+@media screen and (max-width: 800px) {
+    .nav-list {
+        display: none;
+    }
+
+    .top-logo {
+        max-width: 75%;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    p, .nav-list a {
+        font-size: 20px;
+    }
+
+    .grid-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
