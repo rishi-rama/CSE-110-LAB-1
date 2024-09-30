@@ -5,30 +5,30 @@ body {
 }
 
 .top-logo {
-    max-width: 400px;
-    margin: 20px auto;
-    display: block;
+    max-width: 200px;
+    margin-right: 20px;
 }
 
 .navbar {
     background-color: white;
-    padding: 10px 0;
+    padding: 10px 20px;
     position: sticky;
     top: 0;
     z-index: 100;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
 }
 
 .nav-list {
+    display: flex;
     list-style-type: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
 }
 
 .nav-list li {
-    margin: 0 10px;
+    margin-right: 10px;
 }
 
 .nav-list a {
@@ -112,23 +112,22 @@ input[type="email"], input[type="submit"] {
 }
 
 @media screen and (max-width: 800px) {
-    .nav-list {
-        display: none;
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .top-logo {
-        max-width: 75%;
+        margin-bottom: 10px;
     }
 
-    h2 {
-        font-size: 24px;
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
     }
 
-    p, .nav-list a {
-        font-size: 20px;
-    }
-
-    .grid-section {
-        grid-template-columns: repeat(2, 1fr);
+    .nav-list li {
+        margin-right: 0;
+        margin-bottom: 5px;
     }
 }
